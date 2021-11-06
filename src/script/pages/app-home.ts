@@ -33,7 +33,7 @@ export class AppHome extends LitElement {
         font-size: 100px;
         background: url("https://cdn.vox-cdn.com/thumbor/YFLJ3sXfmM9B88nsSZAH6agQUiQ=/0x0:1200x628/2320x1305/filters:focal(504x218:696x410):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66716841/52880675_10156961965209194_5944288072567881728_o.0.jpg") no-repeat center center fixed;
         color: white;
-        text-shadow: 6px 6px black;
+        text-shadow: 5px 5px black;
         border-radius: 10px;
       }
 
@@ -53,7 +53,10 @@ export class AppHome extends LitElement {
         background color:#A52A2A;
       }
 
-
+      .pp{
+        font-size: 60px;
+        text-shadow: 3px 3px black;
+      }
 
 
 
@@ -93,7 +96,7 @@ export class AppHome extends LitElement {
 
 <body>
       <div>
-        <p>Welcome to your cookbook!<BR>Create and access new recipes below:</p>
+        <p>Welcome to your cookbook!</p><p class="pp">Create and access new recipes below:</p>
 
         <fast-anchor href="/recipepage">Navigate to New Page</fast-anchor>
       </div>
