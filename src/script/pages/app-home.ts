@@ -32,7 +32,8 @@ export class AppHome extends LitElement {
         font-family: "Century Gothic";
         font-size: 150px;
         background: url("https://cdn.vox-cdn.com/thumbor/YFLJ3sXfmM9B88nsSZAH6agQUiQ=/0x0:1200x628/2320x1305/filters:focal(504x218:696x410):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66716841/52880675_10156961965209194_5944288072567881728_o.0.jpg") no-repeat center center fixed;
-
+        color: white;
+        text-shadow: 6px 6px black;
         border-radius: 10px;
       }
 
@@ -92,7 +93,7 @@ export class AppHome extends LitElement {
 
 <body>
       <div>
-        <p>Welcome to the page where you'll access and create new reicepies</p>
+        <p>Welcome to your cookbook! Create and access new recipes</p>
 
         <fast-anchor href="/recipepage">Navigate to New Page</fast-anchor>
       </div>
