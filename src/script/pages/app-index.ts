@@ -81,6 +81,13 @@ export class AppIndex extends LitElement {
               await import('./app-newpage.js');
             },
           },
+          {
+            path: '/saveexp',
+            component: 'app-saveexp',
+            action: async () => {
+              await import('./app-saveexp.js');
+            },
+          },
         ],
       } as any,
     ]);
