@@ -163,9 +163,14 @@ export class AppHome extends LitElement {
           </fast-card>
 
           <fast-anchor href="/about">Navigate to About</fast-anchor>
+          <fast-anchor href="/newpage">Navigate to New Page</fast-anchor>
         </div>
 
         <pwa-install>Install PWA Starter</pwa-install>
+
+        <div>
+          <p>Hello, this is some content on the home page</p>
+        </div>
       </div>
     `;
   }
