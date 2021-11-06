@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "Grace is Awesome!",
+=======
+  "name": "Test1",
+>>>>>>> ed11c972476f0075b7bdd24950d2dea90bca7806
   "display": "standalone",
   "start_url": "/",
   "short_name": "starter",
