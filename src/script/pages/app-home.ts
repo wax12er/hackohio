@@ -18,6 +18,23 @@ export class AppHome extends LitElement {
         align-items: center;
         flex-direction: column;
       }
+      app-header{
+        color:blue;
+      }
+      body {
+        background-color: pink;
+      }
+      {
+        background-color:#A52A2A ;
+      }
+      p{
+        text-align:center;
+        font-family: "Century Gothic";
+        font-size: 150px;
+        background: url("https://cdn.vox-cdn.com/thumbor/YFLJ3sXfmM9B88nsSZAH6agQUiQ=/0x0:1200x628/2320x1305/filters:focal(504x218:696x410):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66716841/52880675_10156961965209194_5944288072567881728_o.0.jpg") no-repeat center center fixed;
+
+        border-radius: 10px;
+      }
 
       #welcomeBar fast-card {
         margin-bottom: 12px;
@@ -29,34 +46,17 @@ export class AppHome extends LitElement {
         padding-top: 0px;
       }
 
-      pwa-install {
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
-      }
 
       button {
         cursor: pointer;
+        background color:#A52A2A;
       }
 
-      @media (min-width: 1200px) {
-        #welcomeCard,
-        #infoCard {
-          width: 40%;
-        }
-      }
 
-      @media (screen-spanning: single-fold-vertical) {
-        #welcomeBar {
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: space-between;
-        }
 
-        #welcomeCard {
-          margin-right: 64px;
-        }
-      }
+
+
+
 
       @media(prefers-color-scheme: light) {
         fast-card {
@@ -90,13 +90,13 @@ export class AppHome extends LitElement {
     return html`
       <app-header></app-header>
 
-
+<body>
       <div>
-        <p>Hello, this is some content on the home page</p>
+        <p>Welcome to the page where you'll access and create new reicepies</p>
 
         <fast-anchor href="/recipepage">Navigate to New Page</fast-anchor>
       </div>
-
+</body>
     `;
   }
 }
