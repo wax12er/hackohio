@@ -4,14 +4,36 @@ export class Recipe {
     directions: string = "";
 
     /**
+     * Gets all the recipes stored in localStorage
+     * @returns
+     */
+    static getAllRecipes(): Recipe[] {
+        let recipes: Recipe[] = [];
+
+        for (let i = 0; i < localStorage.length; i++) {
+
+            let item: string = (localStorage.key(i) as string);
+            if (item.startsWith("recipe.") && item.endsWith("_title")) {
+                let title: string = localStorage.getItem(item) as string
+
+                if (Recipe.loadFromStorage(title)) {
+                    recipes.push((Recipe.loadFromStorage(title) as Recipe));
+                }
+            }
+        }
+
+        return recipes;
+    }
+
+    /**
      * Checks the localStorage for a recipe with the title given
      * @param title the title of the recipe to look for
      * @returns true if the recipe exists in storage
      */
     static checkStorage(title: string): boolean {
-        if (localStorage.getItem(title + "_title") &&
-            localStorage.getItem(title + "_ingredients") &&
-            localStorage.getItem(title + "_directions"))
+        if (localStorage.getItem("recipe." + title + "_title") &&
+            localStorage.getItem("recipe." + title + "_ingredients") &&
+            localStorage.getItem("recipe." + title + "_directions"))
         {
             return true;
         } else {
@@ -28,9 +50,9 @@ export class Recipe {
         let loadedRecipe: Recipe = new Recipe();
 
         if (this.checkStorage(title)) {
-            loadedRecipe.title = (localStorage.getItem(title + "_title")) as string;
-            loadedRecipe.ingredients = (localStorage.getItem(title + "_ingredients")) as string;
-            loadedRecipe.directions = (localStorage.getItem(title + "_directions")) as string;
+            loadedRecipe.title = (localStorage.getItem("recipe." + title + "_title") as string);
+            loadedRecipe.ingredients = (localStorage.getItem("recipe." + title + "_ingredients") as string);
+            loadedRecipe.directions = (localStorage.getItem("recipe." + title + "_directions")as string);
         }
 
         return loadedRecipe;
@@ -44,9 +66,9 @@ export class Recipe {
     static removeFromStorage(title: string) {
         let loadedRecipe: Recipe = new Recipe();
 
-        localStorage.removeItem(title + "_title");
-        localStorage.removeItem(title + "_ingredients");
-        localStorage.removeItem(title + "_direction");
+        localStorage.removeItem("recipe." + title + "_title");
+        localStorage.removeItem("recipe." + title + "_ingredients");
+        localStorage.removeItem("recipe." + title + "_direction");
 
         return loadedRecipe;
     }
@@ -55,9 +77,9 @@ export class Recipe {
      * Saves the receiver to localStorage
      */
     saveToStorage() {
-        localStorage.setItem(this.title + "_title", this.title);
-        localStorage.setItem(this.title + "_ingredients", this.ingredients);
-        localStorage.setItem(this.title + "_directions", this.directions);
+        localStorage.setItem("recipe." + this.title + "_title", this.title);
+        localStorage.setItem("recipe." + this.title + "_ingredients", this.ingredients);
+        localStorage.setItem("recipe." + this.title + "_directions", this.directions);
     }
 
 }

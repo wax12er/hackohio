@@ -15,37 +15,49 @@ export class AppSaveTest extends LitElement {
   textToSave: string = "";
 
   onSaveButtonClick() {
-    let testRecipe : Recipe = new Recipe();
-    testRecipe.title = "banan";
-    testRecipe.ingredients = "potassium";
-    testRecipe.directions = "eat banan";
+    this.activeRecipe.saveToStorage();
+  }
 
-    testRecipe.saveToStorage();
-    console.log("banan has been saved");
+  clear() {
+    localStorage.clear();
   }
 
   onLoadButtonClick() {
-    let loadedRecipe: Recipe | null = Recipe.loadFromStorage("banan");
+    let allRecipes: Recipe[] = Recipe.getAllRecipes();
 
-    if (loadedRecipe) {
+    let sr: ShadowRoot | null = this.shadowRoot;
+    if (sr) {
+      let loadText: HTMLElement = ((sr) as ShadowRoot).getElementById("loadText") as HTMLElement;
 
-      let sr: ShadowRoot | null = this.shadowRoot;
-      if (sr) {
-        let loadText = ((sr) as ShadowRoot).getElementById("loadText");
+      loadText.innerHTML = "";
+      for (let loadedRecipe of allRecipes) {
+
 
         if (loadText) {
           let testString: string = "<p>" + loadedRecipe.title + "</p>"
             + "<p>" + loadedRecipe.ingredients + "</p>"
             + "<p>" + loadedRecipe.directions + "</p>";
 
-          (loadText as HTMLElement).innerHTML = testString;
+          loadText.innerHTML += testString;
         }
+
       }
-    } else {
-      console.log("Loading Failed");
     }
   }
 
+  activeRecipe: Recipe = new Recipe();
+
+  changeActiveTitle(evt: any) {
+    this.activeRecipe.title = evt.target.value;
+  }
+
+  changeActiveIngredients(evt: any) {
+    this.activeRecipe.ingredients = evt.target.value;
+  }
+
+  changeActiveDirections(evt: any) {
+    this.activeRecipe.directions = evt.target.value;
+  }
 
   render() {
 
@@ -59,7 +71,18 @@ export class AppSaveTest extends LitElement {
       </div>
       <div>
         <p>
-          Type something down below:
+          Title
+          <input class="my-class" type="text" @input=${this.changeActiveTitle} />
+        </p>
+        <p>
+          Ingredients
+          <input class="my-class" type="text" @input=${this.changeActiveIngredients} />
+
+        </p>
+        <p>
+          Directions
+          <input class="my-class" type="text" @input=${this.changeActiveDirections} />
+
         </p>
 
         <p>
@@ -68,6 +91,9 @@ export class AppSaveTest extends LitElement {
         <p>
           <button @click=${this.onLoadButtonClick}>Load</button>
           <div id="loadText"></div>
+        </p>
+        <p>
+          <button @click=${this.clear}>Clear Storage</button>
         </p>
 
       </div>
