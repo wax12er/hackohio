@@ -18,6 +18,24 @@ export class AppHome extends LitElement {
         align-items: center;
         flex-direction: column;
       }
+      app-header{
+        color:blue;
+      }
+      body {
+        background-color: pink;
+      }
+      {
+        background-color:#A52A2A ;
+      }
+      p{
+        text-align:center;
+        font-family: "Century Gothic";
+        font-size: 100px;
+        background: url("https://cdn.vox-cdn.com/thumbor/YFLJ3sXfmM9B88nsSZAH6agQUiQ=/0x0:1200x628/2320x1305/filters:focal(504x218:696x410):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66716841/52880675_10156961965209194_5944288072567881728_o.0.jpg") no-repeat center center fixed;
+        color: white;
+        text-shadow: 5px 5px black;
+        border-radius: 10px;
+      }
 
       #welcomeBar fast-card {
         margin-bottom: 12px;
@@ -29,34 +47,20 @@ export class AppHome extends LitElement {
         padding-top: 0px;
       }
 
-      pwa-install {
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
-      }
 
       button {
         cursor: pointer;
+        background color:#A52A2A;
       }
 
-      @media (min-width: 1200px) {
-        #welcomeCard,
-        #infoCard {
-          width: 40%;
-        }
+      .pp{
+        font-size: 60px;
+        text-shadow: 3px 3px black;
       }
 
-      @media (screen-spanning: single-fold-vertical) {
-        #welcomeBar {
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: space-between;
-        }
 
-        #welcomeCard {
-          margin-right: 64px;
-        }
-      }
+
+
 
       @media(prefers-color-scheme: light) {
         fast-card {
@@ -79,7 +83,7 @@ export class AppHome extends LitElement {
   share() {
     if ((navigator as any).share) {
       (navigator as any).share({
-        title: 'PWABuilder pwa-starter',
+        title: 'Recipe',
         text: 'Check out the PWABuilder pwa-starter!',
         url: 'https://github.com/pwa-builder/pwa-starter',
       });
@@ -90,89 +94,13 @@ export class AppHome extends LitElement {
     return html`
       <app-header></app-header>
 
+<body>
       <div>
-        <div id="welcomeBar">
-          <fast-card id="welcomeCard">
-            <h2>${this.message}</h2>
+        <p>Welcome to your cookbook! <font size="50"><span style="text-shadow: 2px 2px black">Create and access new recipes below:</span> </font></p>
 
-            <p>
-              For more information on the PWABuilder pwa-starter, check out the
-              <fast-anchor
-                href="https://github.com/pwa-builder/pwa-starter/wiki/Getting-Started
-                appearance="hypertext"
-                >Documentation on Github</fast-anchor
-              >.
-            </p>
-
-            <p>
-              Welcome to the
-              <fast-anchor href="https://pwabuilder.com" appearance="hypertext"
-                >PWABuilder</fast-anchor
-              >
-              pwa-starter! Be sure to head back to
-              <fast-anchor href="https://pwabuilder.com" appearance="hypertext"
-                >PWABuilder</fast-anchor
-              >
-              when you are ready to ship this PWA to the Microsoft Store, Google Play
-              and the Apple App Store!
-            </p>
-
-            ${'share' in navigator
-              ? html`<fast-button appearance="primary" @click="${this.share}"
-                  >Share this Starter!</fast-button
-                >`
-              : null}
-          </fast-card>
-
-          <fast-card id="infoCard">
-            <h2>Technology Used</h2>
-
-            <ul>
-              <li>
-                <fast-anchor
-                  href="https://www.typescriptlang.org/"
-                  appearance="hypertext"
-                  >TypeScript</fast-anchor
-                >
-              </li>
-
-              <li>
-                <fast-anchor
-                  href="https://lit.dev"
-                  appearance="hypertext"
-                  >lit</fast-anchor
-                >
-              </li>
-
-              <li>
-                <fast-anchor
-                  href="https://www.fast.design/docs/components/getting-started"
-                  appearance="hypertext"
-                  >FAST Components</fast-anchor
-                >
-              </li>
-
-              <li>
-                <fast-anchor
-                  href="https://vaadin.github.io/vaadin-router/vaadin-router/demo/#vaadin-router-getting-started-demos"
-                  appearance="hypertext"
-                  >Vaadin Router</fast-anchor
-                >
-              </li>
-            </ul>
-          </fast-card>
-
-          <fast-anchor href="/about">Navigate to About</fast-anchor>
-          <fast-anchor href="/newpage">Navigate to New Page</fast-anchor>
-          <fast-anchor href="/saveexp">Test Page</fast-anchor>
-        </div>
-
-        <pwa-install>Install PWA Starter</pwa-install>
-
-        <div>
-          <p>Hello, this is some content on the home page</p>
-        </div>
+        <fast-anchor href="/recipepage">Navigate to New Page</fast-anchor>
       </div>
+</body>
     `;
   }
 }
