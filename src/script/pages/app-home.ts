@@ -15,6 +15,7 @@ export class AppHome extends LitElement {
     :host {
       display: block;
       background-color: black;
+      color: white;
     }
       #welcomeBar {
         display: flex;
@@ -52,16 +53,31 @@ export class AppHome extends LitElement {
       }
 
 
-      button {
+      fast-anchor {
         cursor: pointer;
-        background color:#A52A2A;
+        background-color:#A52A2A;
+        margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
       }
 
       .pp{
         font-size: 60px;
         text-shadow: 3px 3px black;
       }
-
+      a{
+        margin: 0;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: white;
+      }
 
 
 
