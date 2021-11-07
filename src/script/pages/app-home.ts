@@ -101,7 +101,8 @@ export class AppHome extends LitElement {
 <body>
       <div>
         <p>Welcome to your cookbook! <font size="50"><span style="text-shadow: 2px 2px black">Create and access new recipes below:</span> </font></p>
-
+        <a href="https://www.amazon.com/Beistle-1-Pack-Decorative-Plush-Pumpkin/dp/B00DQV6L4Y/ref=asc_df_B00DQV6L4Y/?tag=hyprod-20&linkCode=df0&hvadid=198060074297&hvpos=&hvnetw=g&hvrand=14892932293174155475&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9014969&hvtargid=pla-350596571464&psc=1">Pumpkin Pie Hat</a>
+        <br>
         <fast-anchor href="/recipepage">Navigate to Recipe</fast-anchor>
       </div>
 </body>
