@@ -31,10 +31,14 @@ export class AppHome extends LitElement {
         text-align:center;
         font-family: "Century Gothic";
         font-size: 100px;
-        background: url("https://cdn.vox-cdn.com/thumbor/YFLJ3sXfmM9B88nsSZAH6agQUiQ=/0x0:1200x628/2320x1305/filters:focal(504x218:696x410):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66716841/52880675_10156961965209194_5944288072567881728_o.0.jpg") no-repeat center center fixed;
+        background: url("https://i.makeagif.com/media/11-28-2016/yXM2q_.gif") no-repeat center center fixed;
         color: white;
         text-shadow: 5px 5px black;
         border-radius: 10px;
+
+        padding-top: 200px;
+  padding-bottom: 200px;
+
       }
 
       #welcomeBar fast-card {
