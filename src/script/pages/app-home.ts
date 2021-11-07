@@ -34,7 +34,7 @@ export class AppHome extends LitElement {
         font-size: 75px;
         background: url("https://eyeq.photos/wp-content/uploads/2018/07/chocolate-delicious-dessert-574111-e1532384590469.jpg") no-repeat center center fixed;
         color: white;
-        text-shadow: 5px 5px black;
+        text-shadow: 4px 4px black;
         border-radius: 10px;
 
         padding-top: 150px;
@@ -72,12 +72,13 @@ export class AppHome extends LitElement {
       }
       a{
         margin: 0;
+        font-size: 4px;
         position: absolute;
-        top: 85%;
-        left: 50%;
+        top: 25%;
+        left: 54%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        color: white;
+        color: black
 
       }
 
