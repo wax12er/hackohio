@@ -62,7 +62,8 @@ export class AppHome extends LitElement {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-
+  font-size: 25px;
+  padding: 5px;
       }
 
       .pp{
@@ -77,6 +78,7 @@ export class AppHome extends LitElement {
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         color: white;
+
       }
 
 
@@ -118,7 +120,7 @@ export class AppHome extends LitElement {
         <p>Welcome to your cookbook! <br><font size="30"><span style="text-shadow: 2px 2px black">Create and access new recipes below:</span> </font></p>
         <a href="https://www.amazon.com/Beistle-1-Pack-Decorative-Plush-Pumpkin/dp/B00P8FN1QW/ref=asc_df_B00DQV6L4Y/?tag=hyprod-20&linkCode=df0&hvadid=198060074297&hvpos=&hvnetw=g&hvrand=14892932293174155475&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9014969&hvtargid=pla-350596571464&th=1">Pumpkin Pie Hat</a>
         <br>
-        <fast-anchor href="/recipepage">Navigate to Recipe</fast-anchor>
+        <fast-anchor href="/recipepage"> Recipe Catalog</fast-anchor>
       </div>
 </body>
     `;
