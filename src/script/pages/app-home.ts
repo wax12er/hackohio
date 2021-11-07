@@ -94,7 +94,7 @@ export class AppHome extends LitElement {
       <div>
         <p>Hello, this is some content on the home page</p>
 
-        <fast-anchor href="/recipepage">Navigate to New Page</fast-anchor>
+        <fast-anchor href="/recipepage">Navigate to Recipe</fast-anchor>
       </div>
 
     `;
