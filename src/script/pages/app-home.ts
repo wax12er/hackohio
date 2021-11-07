@@ -96,7 +96,7 @@ export class AppHome extends LitElement {
 
 <body>
       <div>
-        <p>Welcome to your cookbook!</p><p class="pp">Create and access new recipes below:</p>
+        <p>Welcome to your cookbook! <font size="50"><span style="text-shadow: 2px 2px black">Create and access new recipes below:</span> </font></p>
 
         <fast-anchor href="/recipepage">Navigate to New Page</fast-anchor>
       </div>
