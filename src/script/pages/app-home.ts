@@ -55,7 +55,7 @@ export class AppHome extends LitElement {
 
       fast-anchor {
         cursor: pointer;
-        background-color:#A52A2A;
+        background-color:#4d0000;
         margin: 0;
   position: absolute;
   top: 80%;
