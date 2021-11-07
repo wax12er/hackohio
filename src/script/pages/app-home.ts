@@ -12,6 +12,11 @@ export class AppHome extends LitElement {
 
   static get styles() {
     return css`
+    :host {
+      display: block;
+      background-color: black;
+      color: white;
+    }
       #welcomeBar {
         display: flex;
         justify-content: center;
@@ -21,23 +26,19 @@ export class AppHome extends LitElement {
       app-header{
         color:blue;
       }
-      body {
-        background-color: pink;
-      }
-      {
-        background-color:#A52A2A ;
-      }
+
+
       p{
         text-align:center;
         font-family: "Century Gothic";
-        font-size: 100px;
-        background: url("https://i.makeagif.com/media/11-28-2016/yXM2q_.gif") no-repeat center center fixed;
+        font-size: 75px;
+        background: url("https://eyeq.photos/wp-content/uploads/2018/07/chocolate-delicious-dessert-574111-e1532384590469.jpg") no-repeat center center fixed;
         color: white;
         text-shadow: 5px 5px black;
         border-radius: 10px;
 
-        padding-top: 200px;
-  padding-bottom: 200px;
+        padding-top: 150px;
+  padding-bottom: 150px;
 
       }
 
@@ -52,16 +53,33 @@ export class AppHome extends LitElement {
       }
 
 
-      button {
+      fast-anchor {
         cursor: pointer;
-        background color:#A52A2A;
+        background-color:#A52A2A;
+        margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  padding: 5px;
       }
 
       .pp{
         font-size: 60px;
         text-shadow: 3px 3px black;
       }
+      a{
+        margin: 0;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: white;
 
+      }
 
 
 
@@ -97,12 +115,12 @@ export class AppHome extends LitElement {
   render() {
     return html`
       <app-header></app-header>
-
-<body>
+<body >
       <div>
-        <p>Welcome to your cookbook! <font size="50"><span style="text-shadow: 2px 2px black">Create and access new recipes below:</span> </font></p>
-
-        <fast-anchor href="/recipepage">Navigate to Recipe</fast-anchor>
+        <p>Welcome to your cookbook! <br><font size="30"><span style="text-shadow: 2px 2px black">Create and access new recipes below:</span> </font></p>
+        <a href="https://www.amazon.com/Beistle-1-Pack-Decorative-Plush-Pumpkin/dp/B00P8FN1QW/ref=asc_df_B00DQV6L4Y/?tag=hyprod-20&linkCode=df0&hvadid=198060074297&hvpos=&hvnetw=g&hvrand=14892932293174155475&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9014969&hvtargid=pla-350596571464&th=1">Pumpkin Pie Hat</a>
+        <br>
+        <fast-anchor href="/recipepage"> Recipe Catalog</fast-anchor>
       </div>
 </body>
     `;
