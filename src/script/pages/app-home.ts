@@ -18,6 +18,28 @@ export class AppHome extends LitElement {
         align-items: center;
         flex-direction: column;
       }
+      app-header{
+        color:blue;
+      }
+      body {
+        background-color: pink;
+      }
+      {
+        background-color:#A52A2A ;
+      }
+      p{
+        text-align:center;
+        font-family: "Century Gothic";
+        font-size: 100px;
+        background: url("https://i.makeagif.com/media/11-28-2016/yXM2q_.gif") no-repeat center center fixed;
+        color: white;
+        text-shadow: 5px 5px black;
+        border-radius: 10px;
+
+        padding-top: 200px;
+  padding-bottom: 200px;
+
+      }
 
       #welcomeBar fast-card {
         margin-bottom: 12px;
@@ -29,34 +51,20 @@ export class AppHome extends LitElement {
         padding-top: 0px;
       }
 
-      pwa-install {
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
-      }
 
       button {
         cursor: pointer;
+        background color:#A52A2A;
       }
 
-      @media (min-width: 1200px) {
-        #welcomeCard,
-        #infoCard {
-          width: 40%;
-        }
+      .pp{
+        font-size: 60px;
+        text-shadow: 3px 3px black;
       }
 
-      @media (screen-spanning: single-fold-vertical) {
-        #welcomeBar {
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: space-between;
-        }
 
-        #welcomeCard {
-          margin-right: 64px;
-        }
-      }
+
+
 
       @media(prefers-color-scheme: light) {
         fast-card {
@@ -90,13 +98,13 @@ export class AppHome extends LitElement {
     return html`
       <app-header></app-header>
 
-
+<body>
       <div>
-        <p>Hello, this is some content on the home page</p>
+        <p>Welcome to your cookbook! <font size="50"><span style="text-shadow: 2px 2px black">Create and access new recipes below:</span> </font></p>
 
         <fast-anchor href="/recipepage">Navigate to Recipe</fast-anchor>
       </div>
-
+</body>
     `;
   }
 }
