@@ -31,13 +31,13 @@ export class AppHome extends LitElement {
         text-align:center;
         font-family: "Century Gothic";
         font-size: 100px;
-        background: url("https://i.makeagif.com/media/11-28-2016/yXM2q_.gif") no-repeat center center fixed;
+        background: url("https://iso.500px.com/wp-content/uploads/2020/02/Sushi-and-sashimi-variety-on-rustic-background-By-Alena-Haurylik-2.jpeg") no-repeat center center fixed;
         color: white;
         text-shadow: 5px 5px black;
         border-radius: 10px;
 
-        padding-top: 200px;
-  padding-bottom: 200px;
+        padding-top: 150px;
+  padding-bottom: 150px;
 
       }
 
