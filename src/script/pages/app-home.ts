@@ -14,8 +14,7 @@ export class AppHome extends LitElement {
     return css`
     :host {
       display: block;
-      background-color: pink;
-      padding: 8px;
+      background-color: black;
     }
       #welcomeBar {
         display: flex;
@@ -31,14 +30,14 @@ export class AppHome extends LitElement {
       p{
         text-align:center;
         font-family: "Century Gothic";
-        font-size: 100px;
-        background: url("https://i.makeagif.com/media/11-28-2016/yXM2q_.gif") no-repeat center center fixed;
+        font-size: 75px;
+        background: url("https://eyeq.photos/wp-content/uploads/2018/07/chocolate-delicious-dessert-574111-e1532384590469.jpg") no-repeat center center fixed;
         color: white;
         text-shadow: 5px 5px black;
         border-radius: 10px;
 
-        padding-top: 200px;
-  padding-bottom: 200px;
+        padding-top: 150px;
+  padding-bottom: 150px;
 
       }
 
@@ -100,8 +99,8 @@ export class AppHome extends LitElement {
       <app-header></app-header>
 <body >
       <div>
-        <p>Welcome to your cookbook! <font size="50"><span style="text-shadow: 2px 2px black">Create and access new recipes below:</span> </font></p>
-        <a href="https://www.amazon.com/Beistle-1-Pack-Decorative-Plush-Pumpkin/dp/B00DQV6L4Y/ref=asc_df_B00DQV6L4Y/?tag=hyprod-20&linkCode=df0&hvadid=198060074297&hvpos=&hvnetw=g&hvrand=14892932293174155475&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9014969&hvtargid=pla-350596571464&psc=1">Pumpkin Pie Hat</a>
+        <p>Welcome to your cookbook! <br><font size="30"><span style="text-shadow: 2px 2px black">Create and access new recipes below:</span> </font></p>
+        <a href="https://www.amazon.com/Beistle-1-Pack-Decorative-Plush-Pumpkin/dp/B00P8FN1QW/ref=asc_df_B00DQV6L4Y/?tag=hyprod-20&linkCode=df0&hvadid=198060074297&hvpos=&hvnetw=g&hvrand=14892932293174155475&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9014969&hvtargid=pla-350596571464&th=1">Pumpkin Pie Hat</a>
         <br>
         <fast-anchor href="/recipepage">Navigate to Recipe</fast-anchor>
       </div>
