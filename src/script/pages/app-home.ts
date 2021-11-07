@@ -12,6 +12,11 @@ export class AppHome extends LitElement {
 
   static get styles() {
     return css`
+    :host {
+      display: block;
+      background-color: pink;
+      padding: 8px;
+    }
       #welcomeBar {
         display: flex;
         justify-content: center;
@@ -21,23 +26,19 @@ export class AppHome extends LitElement {
       app-header{
         color:blue;
       }
-      body {
-        background-color: pink;
-      }
-      {
-        background-color:#A52A2A ;
-      }
+
+
       p{
         text-align:center;
         font-family: "Century Gothic";
         font-size: 100px;
-        background: url("https://iso.500px.com/wp-content/uploads/2020/02/Sushi-and-sashimi-variety-on-rustic-background-By-Alena-Haurylik-2.jpeg") no-repeat center center fixed;
+        background: url("https://i.makeagif.com/media/11-28-2016/yXM2q_.gif") no-repeat center center fixed;
         color: white;
         text-shadow: 5px 5px black;
         border-radius: 10px;
 
-        padding-top: 150px;
-  padding-bottom: 150px;
+        padding-top: 200px;
+  padding-bottom: 200px;
 
       }
 
@@ -97,8 +98,7 @@ export class AppHome extends LitElement {
   render() {
     return html`
       <app-header></app-header>
-
-<body>
+<body >
       <div>
         <p>Welcome to your cookbook! <font size="50"><span style="text-shadow: 2px 2px black">Create and access new recipes below:</span> </font></p>
         <a href="https://www.amazon.com/Beistle-1-Pack-Decorative-Plush-Pumpkin/dp/B00DQV6L4Y/ref=asc_df_B00DQV6L4Y/?tag=hyprod-20&linkCode=df0&hvadid=198060074297&hvpos=&hvnetw=g&hvrand=14892932293174155475&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9014969&hvtargid=pla-350596571464&psc=1">Pumpkin Pie Hat</a>
